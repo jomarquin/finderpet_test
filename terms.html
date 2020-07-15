@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	    <!-- Required meta tags -->
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Boostrap CSS -->
+	    <!-- build:css css/index.css -->
+	    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	    <link rel="shortcut icon" href="/favicon.png">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+		<!-- endbuild -->
+
+	    <title>Home</title>
+	</head>
+	<body>
+		<nav class="navbar  navbar-expand-md navbar-dark bg-dark fixed-top">
+			<a class="navbar-brand" href="#">Hoteles</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="./about.html">Quienes Somos</a></li>
+					<li class="nav-item"><a class="nav-link" href="./prices.html">Precios</a></li>
+					<li class="nav-item active"><a class="nav-link" href="#">Términos y condiciones</a></li>
+					<li class="nav-item"><a class="nav-link" href="./contact.html">Contáctanos</a></li>
+				</ul>
+			</div>
+		</nav>
+	    <div class="jumbotron">
+			<h1>Hoteles</h1>
+			<p>La mejor guía de hoteles online</p>	    		  
+		</div>
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item" aria-current="page"><a href="./index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Términos y condiciones</li>
+				</ol>
+			</nav>
+			<span>
+				is simply dummy text of the printing and typesetting industry. 
+				Lorem Ipsum has been the industry's standard dummy text ever since 
+				the 1500s, when an unknown printer took a galley of type and scrambled 
+				it to make a type specimen book. It has survived not only five centuries, 
+				but also the leap into electronic typesetting, remaining essentially 
+				unchanged. It was popularised in the 1960s with the release of Letraset 
+				sheets containing Lorem Ipsum passages, and more recently with desktop 
+				publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</span>
+		</div>
+		<hr>
+
+	    <footer>
+	    	<div class="row">
+	    		<div class="col-sm-4 d-flex flex-column">
+		    		<a href="http://www.facebook.com">Facebook</a>
+		    		<a href="http://www.instagram.com">Instagram</a>
+		    		<a href="http://www.twitter.com">Twitter</a>
+		    		<a href="http://www.google.com">Google</a>
+		    	</div>
+		    	<div class="col-sm-4">
+		    		<address>
+						<h4>Oficina Principal</h4>
+		    			<p>Carrera 56 # 52 sur -13, Barrio Aragón, Medellín</p>
+		    			<p>+57 300 846 07 07</p>
+		    			<p>contacto@guiahoteles.com</p>
+		    		</address>
+		    	</div>
+		    	<div class="col-sm-4 d-flex flex-column align-items-end">
+		    		<a href="http://www.facebook.com">Quienes Somos</a>
+		    		<a href="http://www.instagram.com">Precios</a>
+		    		<a href="http://www.twitter.com">Términos y condiciones</a>
+		    		<a href="http://www.google.com">Contáctanos</a>
+		    	</div>
+	    	</div>
+	    </footer>	
+
+	    <!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<!-- build:js js/main.js -->
+	    <script src="node_modules/jQuery/dist/jQuery.min.js"></script>
+	    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>				
+		<!-- Script para activar los tooltip, popover y velocidad del carousel -->
+		<script>
+			$(function(){
+				$("[data-toggle=tooltip]").tooltip();
+				$('[data-toggle="popover"]').popover();
+				$('.carousel').carousel({
+					interval: 3000
+				});	
+
+				$('#registro').on('show.bs.modal', function (e){
+					console.log('El modal se está mostrando');
+					//cuando se abre el modal podemos aplicar algunos cambios al boton
+					$('#btnRegistro').removeClass('btn-outline-success');
+					$('#btnRegistro').addClass('btn-primary');
+					$('#btnRegistro').prop('disabled', true);
+				});
+
+				$('#registro').on('shown.bs.modal', function (e){
+					console.log('El modal se mostró');
+				});
+
+				$('#registro').on('hide.bs.modal', function (e){
+					console.log('El modal se está ocultando');
+				});
+				//cuando se cierro el modal podemos activar de nuevo el boton
+				$('#registro').on('hidden.bs.modal', function (e){
+					console.log('El modal se está ocultó');
+					$('#btnRegistro').removeClass('btn-primary');
+					$('#btnRegistro').addClass('btn-outline-success');
+					$('#btnRegistro').prop('disabled', false);
+				});
+			});
+		</script>	
+		<!-- endbuild -->
+	</body>
+</html>
