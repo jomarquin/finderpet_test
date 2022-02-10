@@ -41,7 +41,7 @@
     "htmlmin": "0.0.7",
     "jit-grunt": "^0.10.0",
     "lite-server": "^2.5.4",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "ruby": "^0.6.1",
     "sass": "^1.26.9",
     "time-grunt": "^2.0.0",
